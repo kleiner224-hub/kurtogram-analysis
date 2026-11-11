@@ -54,7 +54,7 @@ def fast_kurtogram(x,fs,nlevel=7):
     if nlevel > N2:
         raise ValueError('Please enter a smaller number of decomposition levels')
         
-    x -= np.mean(x)
+    x = x.astype(float, copy=True) - np.mean(x)
     
     N = 16
     fc = 0.4
@@ -128,7 +128,7 @@ def _kurt(this_x,opt):
         if np.all(this_x == 0):
             K = 0
             return K
-        x -= np.mean(this_x)
+        this_x -= np.mean(this_x)
         E = np.mean(np.abs(this_x))
         
         if E < eps:

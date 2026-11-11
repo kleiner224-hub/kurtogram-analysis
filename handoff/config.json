@@ -1,0 +1,30 @@
+{
+  "input": {
+    "path": "../aoyu_example_data.txt",
+    "format": "labview_txt",
+    "skip_header": 23
+  },
+  "fs": 100000,
+  "speed_rpm": 1000,
+  "bearing": {
+    "n_balls": 9,
+    "ball_d": 7.94,
+    "pitch_d": 39.04,
+    "contact_deg": 0
+  },
+  "kurtogram": {
+    "nlevel": 6
+  },
+  "envelope": {
+    "env_fs": 2500,
+    "nperseg": 8192,
+    "tolerance_pct": 2.0,
+    "harmonics": 3,
+    "min_snr": 3.0
+  },
+  "output": {
+    "results_json": "results.json",
+    "plot_prefix": "out"
+  },
+  "_comment": "Geometria del rodamiento de EJEMPLO (tipo 6205). Sustituir por la real de la maquina. Con geometria incorrecta los resultados BPFO/BPFI/BSF/FTF no tienen significado."
+}
